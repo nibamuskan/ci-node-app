@@ -1,4 +1,4 @@
-const add=require('./app');
+const { add } =require('./app');
 
 if(add(2,3)===5)
 {
