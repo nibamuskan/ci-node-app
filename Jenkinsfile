@@ -6,21 +6,6 @@ pipeline{
                 git branch : 'main' , url:'https://github.com/nibamuskan/ci-node-app.git'
             }
         }
-        stage('Install Dependencies'){
-            steps{
-                bat 'npm install'
-            }
-        }
-        stage('Run Applications'){
-            steps{
-            bat 'node app.js'
-            }
-        }
-        stage('Test'){
-            steps{
-                bat 'npm test'
-            }
-        }
         stage('Build Docker Image'){
             steps{
                 bat 'docker build -t ci-node-app .'
