@@ -13,7 +13,7 @@ pipeline{
         }
         stage('Run Docker Containers'){
             steps{
-                bat 'docker run -d -p 8080:80 --name web-container ci-node-app'
+                bat 'docker run -d -p 9000:80 --name pipeline-container ci-node-app'
             }
         }
     }
