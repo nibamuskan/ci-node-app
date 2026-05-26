@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Clone Repository'){
             steps{
-                git 'https://github.com/nibamuskan/ci-node-app.git'
+                git branch : 'main' , url:'https://github.com/nibamuskan/ci-node-app.git'
             }
         }
         stage('Install Dependencies'){
